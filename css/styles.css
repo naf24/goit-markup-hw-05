@@ -302,6 +302,8 @@ li {
   top: 77%;
   left: 0;
   display: flex;
+  justify-content center;
+  align-items center;
  
 }
 .icon {
@@ -329,7 +331,6 @@ li {
 }
 .hero-container {
   display: flex;
-  margin
   justify-content: space-between;
   align-items: center;
   
