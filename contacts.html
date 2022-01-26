@@ -68,3 +68,62 @@
       /div>
       footer container wrapper div ul li li li ul div div ul li li li ul div
     wrapper contaner footer
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>X</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    (() => {
+      const refs = {
+        openModalBtn: document.querySelector("[data-modal-open]"),
+        closeModalBtn: document.querySelector("[data-modal-close]"),
+        modal: document.querySelector("[data-modal]"),
+      };
+
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+
+      function toggleModal() {
+        refs.modal.classList.toggle("is-hidden");
+      }
+    })();
+  </script>
+
+  
+position: absolute;
+width: 370px;
+height: 70px;
+left: 1015px;
+top: 1435px;
+
+background: rgba(47, 48, 58, 0.8);
+
+<div class="product-actions">
+  <button aria-label="ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ" class="item">
+    <svg class="features-decoration">
+      <use href="imgs/icons.svg/sprite.svg#icon-desktopapp"></use>
+    </svg>
+  </button>
+  </div>
+  <div class="product-actions">
+  <button aria-label="МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ" class="item">
+    <svg class="features-decoration">
+      <use href="imgs/icons.svg/sprite.svg#icon-mobileapp"></use>
+    </svg>
+  </button>
+  </div>
+  <div class="product-actions">
+  <button aria-label="ДИЗАЙНЕРСКИЕ РЕШЕНИЯ" class="item">
+    <svg class="features-decoration">
+      <use href="imgs/icons.svg/#icon-designerdec"></use>
+    </svg>
+  </button>
+</div>
+
+.product-actions {
+  position: absolute;
+  outline: 3px solid orange;
+  display: orange;
+}
