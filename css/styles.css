@@ -653,11 +653,9 @@ border-radius: 4px;
   left: 215px;
   top: 262px;
   transform: translate(-58%,-89%);
-
-background: rgba(33, 150, 243, 0.9);
+  background-color: rgba(33, 150, 243, 0.9);
 }
 .icon-text{
-  inherits: none;
   font-family: Roboto;
   text-align: left;
   padding: 62 24 63 24;
@@ -669,8 +667,28 @@ background: rgba(33, 150, 243, 0.9);
 .projects-item:hover .portfolio-actions {
   opacity: 1;
 }
+portfolio-actions::before {
+  display: inline-block;
+  content: "";
+  width:100%;
+  height: 100%;
+  
+  
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+}
+ portfolio-actions::before {
+   display: inline-block;
+   position: absolute;
+   content: "";
+   width: 100%;
+   height: 100%;
+   
+   
+ }
 
-.projects-title {
+ .project-title {
   font-family: inherit;
   font-style: normal;
   font-weight: bold;
@@ -680,6 +698,7 @@ background: rgba(33, 150, 243, 0.9);
   color: var(--title-text-color);
   
 }
+
 .projects-item .img {
   background-color: var(--backround-middle);
 }
