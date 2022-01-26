@@ -95,6 +95,7 @@ body {
   color: var(--title-text-color);
   font-weight: 500px;
   line-height: 1.2;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 li {
@@ -111,6 +112,7 @@ li {
   letter-spacing: 0.02em;
 
   color: var(--title-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -145,6 +147,7 @@ li {
   background-color: inherit;
   margin-right: 10px;
   fill: var(--primary-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover,
@@ -185,6 +188,12 @@ li {
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn:hover,
+.btn:focus {
+background-color: var(--primary-text-color);
 }
 
 .body-button-section {
@@ -236,6 +245,7 @@ li {
 }
 .backdrop.is-hidden {
   position: fixed;
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 
@@ -427,6 +437,7 @@ border-radius: 0px 0px 4px 4px;
   border-radius: 50%;
   width: 44px;
   height: 44px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-item:focus,
@@ -438,6 +449,7 @@ border-radius: 0px 0px 4px 4px;
   width: 20px;
   height: 20px;
  fill: #AFB1B8;
+ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-item:hover .socialmedia-icon,
@@ -465,6 +477,7 @@ border-radius: 0px 0px 4px 4px;
   border-radius: 4px;
   padding-bottom: 0;
   cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-list:focus,
 .clients-list:hover {
@@ -492,6 +505,7 @@ border-radius: 0px 0px 4px 4px;
 .clients-icon {
   width: 170px;
   height: 92px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -581,6 +595,7 @@ footer-contact:focus
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   margin-right: 10px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 
@@ -592,6 +607,7 @@ footer-contact:focus
   width: 20px;
   height: 20px;
  fill:var(--white);
+ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footersoc-icon:focus,
@@ -629,6 +645,11 @@ footer-contact:focus
   text-align: center;
   background: #f5f4fa;
   letter-spacing: 0.03em;
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+border-radius: 4px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   
 }
 
@@ -639,8 +660,7 @@ footer-contact:focus
 .btn-portfolio:focus {
    color: var(--white);
   background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-border-radius: 4px;
+  
 }
 .portfolio-buttons .li {
   font-family: inherit;
@@ -654,6 +674,7 @@ border-radius: 4px;
   margin: 0;
   padding: 10px 32px;
   background-color: var(--background-color);
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-item {
   border-radius: 4px;
@@ -664,7 +685,12 @@ border-radius: 4px;
 }
 /* Проекты */
 
+btnbefore {
+  content: "";
+  display: inline-flex;
 
+  background-color: pink;
+}
 .projects-list {
   display: flex;
   justify-content: center;
@@ -677,14 +703,25 @@ border-radius: 4px;
   margin-bottom: 30px;
   cursor: pointer;
   position: relative;
+   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.projects-item:nth-child(3n) {
-  margin-right: 0px;
+
+.projects-item::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  height: 294px;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 1;
 }
-.projects-item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
+.projects-item:hover .portfolio-actions {
+  transform: translateY(50px);
 }
-.portfolio-actions {
+portfolio-actions {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -697,6 +734,15 @@ border-radius: 4px;
   transform: translate(-58%,-89%);
   background-color: rgba(33, 150, 243, 0.9);
 }
+
+
+.projects-item:nth-child(3n) {
+  margin-right: 0px;
+}
+.projects-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
 .icon-text{
   font-family: Roboto;
   text-align: left;
@@ -706,8 +752,7 @@ border-radius: 4px;
   line-height: 1.6;
   color: var(--white);
 }
-.projects-item:hover .portfolio-actions {
-  opacity: 1;
+
 }
 portfolio-actions::before {
   display: inline-block;
@@ -726,8 +771,7 @@ portfolio-actions::before {
    content: "";
    width: 100%;
    height: 100%;
-   
-   
+  
  }
 
  .project-title {
