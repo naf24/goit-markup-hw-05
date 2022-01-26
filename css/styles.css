@@ -229,8 +229,9 @@ li {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 528px;
-  min-height: 581px;
+  min-width: 100%;
+  min-height: 100%;
+  background-color:  rgba(0, 0, 0, 0.2);
 
 }
 .backdrop.is-hidden {
@@ -255,8 +256,15 @@ li {
   border-radius: 4px;
 }
 button.modal-close {
-  font-family: inherit;
-  color: #212121;
+  margin-left: 490px;
+  width: 30px;
+  height: 30px;
+ 
+  background-color: var(--white);
+  color: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
 }
 
 /* Преимущества */
