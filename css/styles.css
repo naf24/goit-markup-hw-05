@@ -292,7 +292,23 @@ li {
   text-align: center;
   margin-bottom: 50px;
 }
+.services-item {
+  position: relative;
+  width: 370px;
+  height: 294px;
+}
+.product-actions {
+  position: absolute;
+  top: 77%;
+  left: 0;
+  display: flex;
+ 
+}
+.icon {
+  width:370px;
+  height:70px;
 
+}
 /* Команда */
 
 .hero-section {
@@ -313,7 +329,7 @@ li {
 }
 .hero-container {
   display: flex;
-  margin 0;
+  margin
   justify-content: space-between;
   align-items: center;
   
