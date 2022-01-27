@@ -502,6 +502,7 @@ li {
   fill: var(--white);
   background-color: var(--accent-color);
 }
+
 /*Постоянные клиенты*/
 
 .clients-title {
